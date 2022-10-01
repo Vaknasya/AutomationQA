@@ -7,7 +7,7 @@ public class LoggerManager {
 
     private static final Logger log = LoggerFactory.getLogger(
             LoggerManager.class.getName());
-    // hello world
+
     public void getLoggerMessage(String message) {
         log.info(message);
     }
