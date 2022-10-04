@@ -3,8 +3,11 @@ package testAutoFramework.elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import testAutoFramework.browser.WebDriverSingleton;
 import testAutoFramework.utils.LoggerManager;
+
+import java.util.List;
 
 public class BaseElement {
     protected static LoggerManager logger = new LoggerManager();
@@ -22,5 +25,23 @@ public class BaseElement {
         return instance.findElement(this.locator);
     }
 
+    public void click() {
+        logger.getLoggerMessage(this.getClass().toString(), this.name);
+        findElement().click();
+    }
+
+    public List<WebElement> findElements() {
+        logger.getLoggerMessage("Finding elements: {}", this.name);
+        return instance.findElements(this.locator);
+    }
+
+    public boolean isDisplayed() {
+        logger.getLoggerMessage("Check is element displayed: {}", this.name);
+        return findElement().isDisplayed();
+    }
+
+    public void moveTo() {
+        new Actions(instance).moveToElement(findElement()).build().perform();
+    }
 
 }

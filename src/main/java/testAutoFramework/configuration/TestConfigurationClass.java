@@ -1,4 +1,4 @@
 package testAutoFramework.configuration;
 
-public class TestClass {
+public class TestConfigurationClass {
 }
