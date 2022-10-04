@@ -12,7 +12,7 @@ public class WebDriverSingleton {
 
     public static synchronized WebDriver getDriver() {
         if (instance == null) {
-            instance = createBrowserByArgument(DriverFactoryType.FIREFOX);
+            instance = createBrowserByArgument(DriverFactoryType.CHROME);
         }
         return instance;
     }
