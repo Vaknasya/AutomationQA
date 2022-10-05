@@ -1,4 +1,4 @@
-package tafPages.steamPages;
+package tafPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
