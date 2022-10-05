@@ -2,7 +2,7 @@ package tafTests.steamTests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tafPages.SteamStoreForm;
+import tafPages.steamPages.SteamStoreForm;
 import tafTests.BaseTest;
 
 public class storePageAboutPage extends BaseTest {
