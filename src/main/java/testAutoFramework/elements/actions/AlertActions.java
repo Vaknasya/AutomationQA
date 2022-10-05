@@ -1,4 +1,4 @@
-package testAutoFramework.browser;
+package testAutoFramework.elements.actions;
 
 public enum AlertActions {
     ACCEPT,

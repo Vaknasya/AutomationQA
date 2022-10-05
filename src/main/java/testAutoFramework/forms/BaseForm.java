@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import testAutoFramework.browser.WebDriverSingleton;
 
-public class BaseForm {
-    protected WebDriver instance = WebDriverSingleton.getDriver();
+public abstract class BaseForm {
+    protected WebDriver driver = WebDriverSingleton.getDriver();
     private  By locator;
     private String name;
 
@@ -15,13 +15,9 @@ public class BaseForm {
         this.name = name;
     }
 
-    public BaseForm(WebDriver instance){
-        this.instance = instance;
+    public BaseForm(WebDriver driver){
+        this.driver = driver;
     }
-
-//    public BaseForm(WebDriver instance) {
-//        this.instance = instance;
-//    }
 
     public By getLocator() {
         return locator;

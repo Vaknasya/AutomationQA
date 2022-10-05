@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesManager {
+    // переделать под JSON
     protected static LoggerManager logger = new LoggerManager();
     private static FileInputStream fileConfigInputStream;
     private static FileInputStream fileTestDataInputStream;

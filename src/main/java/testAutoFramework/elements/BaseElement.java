@@ -9,7 +9,7 @@ import testAutoFramework.utils.LoggerManager;
 
 import java.util.List;
 
-public class BaseElement {
+public abstract class BaseElement {
     protected static LoggerManager logger = new LoggerManager();
     protected static WebDriver instance = WebDriverSingleton.getInstance();
     public By locator;
@@ -40,8 +40,21 @@ public class BaseElement {
         return findElement().isDisplayed();
     }
 
+    public String getText(){
+        logger.getLoggerMessage("Getting text text");
+        return findElement().getText();
+    }
+    
+    public void sendKeys(String keys){
+        logger.getLoggerMessage("Getting text text");
+        findElement().sendKeys(keys);
+    }
+
     public void moveTo() {
         new Actions(instance).moveToElement(findElement()).build().perform();
     }
 
+
+
+    
 }

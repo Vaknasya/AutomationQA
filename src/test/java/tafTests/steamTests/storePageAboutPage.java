@@ -1,4 +1,4 @@
-package tafTests;
+package tafTests.steamTests;
 
 import org.testng.annotations.Test;
 import tafPages.SteamStoreForm;
@@ -12,6 +12,8 @@ public class storePageAboutPage extends BaseTest {
 
         driver.get(STEAM_URL);
         storeForm.clickAboutBtn();
+
+
 
     }
 }
