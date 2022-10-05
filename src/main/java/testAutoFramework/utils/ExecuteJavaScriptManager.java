@@ -7,8 +7,12 @@ public class ExecuteJavaScriptManager {
     WebDriver driver = WebDriverSingleton.getDriver();
     JavaScriptEnum scriptEnum;
 
+    public static void executeJsScript(JavaScriptEnum scriptName) {
+        switch (scriptName) {
+            case OPEN_NEW_WINDOW -> {
+                return;
+            }
 
-    public void executeJsScript(JavaScriptEnum scriptName) {
-
+        }
     }
 }
