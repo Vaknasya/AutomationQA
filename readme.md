@@ -1,25 +1,11 @@
-##Time to choose, mr.Freeman
+## Simple Test Automation Framework
 
-####The following topics need to be learned/reinforced/improved:
+#### Sometimes, I dream about cheese.
 
-```Delivery Process
-QA Strategy
-TAF
-JAVA or another proglang
-UI
-API
-BDD & TDD
-CI/CD
-DB
-Reporting
-Performance
-Static Code Analysis
+The project includes a design pattern Paje Object, as well as 
+technologies such as: 
+`Maven, TestNG, Selenium, WebDriverManager, SLF4J Logger;`
 
-Security
-Mobile
-Cloud
-Git
-Docker
-English
-```
+In future: `JSON, CI/CD, DataBases dependencies, TDD`
+
 
