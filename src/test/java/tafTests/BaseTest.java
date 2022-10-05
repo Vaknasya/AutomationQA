@@ -11,6 +11,7 @@ import testAutoFramework.utils.LoggerManager;
 public abstract class BaseTest {
     // переделать под конфиг и переименовать под BASE_URL
     protected static final String STEAM_URL = "https://store.steampowered.com/";
+
     protected WebDriver driver = WebDriverSingleton.getDriver();
     protected static LoggerManager logger = new LoggerManager();
 
