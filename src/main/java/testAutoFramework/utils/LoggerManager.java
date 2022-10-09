@@ -24,11 +24,15 @@ public class LoggerManager {
         log.error(error, description);
     }
 
-    public static void getLoggerWarning(String warning) {
+    public void getLoggerWarning(String warning) {
         log.warn(warning);
     }
 
-    public static void getLoggerWarning(String warning, String description) {
+    public void getLoggerWarning(String warning, String description) {
         log.warn(warning, description);
+    }
+
+    public void getLoggerInfo(String info) {
+        log.info(info);
     }
 }

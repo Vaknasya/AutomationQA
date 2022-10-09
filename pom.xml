@@ -84,6 +84,14 @@
             <version>2.0.0</version>
         </dependency>
 
+        <!--            lombok
+       https://central.sonatype.dev/artifact/org.projectlombok/lombok/1.18.24  -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+        </dependency>
+
     </dependencies>
 
     <properties>

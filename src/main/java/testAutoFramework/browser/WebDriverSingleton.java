@@ -3,7 +3,7 @@ package testAutoFramework.browser;
 import org.openqa.selenium.WebDriver;
 
 import static testAutoFramework.browser.DrivarFactory.createBrowserByArgument;
-import static testAutoFramework.browser.DriverFactoryType.*;
+import static testAutoFramework.browser.DriverEnum.*;
 
 public class WebDriverSingleton {
     private static WebDriver instance;

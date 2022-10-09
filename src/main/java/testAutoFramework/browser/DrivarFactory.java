@@ -5,13 +5,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import testAutoFramework.utils.LoggerManager;
+
 
 public class DrivarFactory {
-    DriverFactoryType browserType;
+    DriverEnum driverEnum;
+    protected static LoggerManager logger = new LoggerManager();
 
-    static WebDriver createBrowserByArgument(DriverFactoryType browserType) {
-
-        switch (browserType) {
+    static WebDriver createBrowserByArgument(DriverEnum driverEnum) {
+       logger.getLoggerInfo("Setup webDriver" + driverEnum);
+        switch (driverEnum) {
             case CHROME:
                 return new ChromeDriver();
 
@@ -29,7 +32,7 @@ public class DrivarFactory {
                 return new FirefoxDriver(firefoxOptions);
         }
 
-        throw new RuntimeException(browserType + " is unknown argument");
+        throw new RuntimeException(driverEnum + " is unknown argument");
     }
 }
 

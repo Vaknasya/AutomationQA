@@ -54,7 +54,5 @@ public abstract class BaseElement {
         new Actions(instance).moveToElement(findElement()).build().perform();
     }
 
-
-
     
 }

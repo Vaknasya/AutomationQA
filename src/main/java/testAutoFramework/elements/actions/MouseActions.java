@@ -1,5 +1,9 @@
 package testAutoFramework.elements.actions;
 
-public class MouseActions {
+import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
+import testAutoFramework.elements.BaseElement;
 
+public class MouseActions {
+    
 }

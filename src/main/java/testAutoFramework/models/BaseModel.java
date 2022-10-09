@@ -1,4 +1,4 @@
 package testAutoFramework.models;
 
-public class Persom {
+public abstract class BaseModel {
 }

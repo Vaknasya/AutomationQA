@@ -38,6 +38,4 @@ public class SteamStoreForm extends BaseForm {
         goToStoreButton.click();
     }
 
-
-
 }

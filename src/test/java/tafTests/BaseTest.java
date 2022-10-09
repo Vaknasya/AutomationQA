@@ -9,8 +9,9 @@ import testAutoFramework.browser.WebDriverSingleton;
 import testAutoFramework.utils.LoggerManager;
 
 public abstract class BaseTest {
-    // переделать под конфиг и переименовать под BASE_URL
+    // переделать под конфиг и переименовать под BASE_URL или реализовать enum
     protected static final String STEAM_URL = "https://store.steampowered.com/";
+    protected static final String DEMOQA_URL = "https://demoqa.com/webtables";
 
     protected WebDriver driver = WebDriverSingleton.getDriver();
     protected static LoggerManager logger = new LoggerManager();
