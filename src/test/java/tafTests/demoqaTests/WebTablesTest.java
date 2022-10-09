@@ -4,10 +4,15 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tafPages.demoqaPages.WebTablesPage;
 import tafTests.BaseTest;
+import testAutoFramework.models.BaseModel;
+import testAutoFramework.models.Person;
 
 public class WebTablesTest extends BaseTest {
 
     private WebTablesPage webTablesForm = new WebTablesPage(driver);
+
+
+
 
     @Test
     public void webTablesPageTest() {

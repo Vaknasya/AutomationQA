@@ -50,9 +50,6 @@ public abstract class BaseElement {
         findElement().sendKeys(keys);
     }
 
-    public void moveTo() {
-        new Actions(instance).moveToElement(findElement()).build().perform();
-    }
 
     
 }
