@@ -20,6 +20,12 @@ public class WebTablesTest extends BaseTest {
         // использовать дата провайдер и начать использовать вейтеры
 
         webTablesForm.open(DEMOQA_URL);
+
+        webTablesForm.clickElementsCard();
+
+        webTablesForm.clickWebTablesLabel();
+
+        webTablesForm.clickAddNewRecordBtn();
         // Assert
 
         // Label Elements //*[@class='category-cards']/div[1]

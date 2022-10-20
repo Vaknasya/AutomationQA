@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import tafPages.steamPages.SteamStoreForm;
 import tafTests.BaseTest;
 
-public class storePageAboutPage extends BaseTest {
+public class storePageAboutTest extends BaseTest {
 
     private SteamStoreForm storeForm = new SteamStoreForm(driver);
 
