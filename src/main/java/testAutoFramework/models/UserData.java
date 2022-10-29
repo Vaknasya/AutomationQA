@@ -1,13 +1,13 @@
 package testAutoFramework.models;
 
-public class UserDataApi {
+public class UserData {
     private Integer id;
     private String email;
     private String first_name;
     private String last_name;
     private String avatar;
 
-    public UserDataApi(Integer id, String email, String first_name, String last_name, String avatar) {
+    public UserData(Integer id, String email, String first_name, String last_name, String avatar) {
         this.id = id;
         this.email = email;
         this.first_name = first_name;
