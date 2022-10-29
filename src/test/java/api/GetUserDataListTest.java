@@ -15,9 +15,9 @@ public class GetUserDataListTest {
     private final static String REQUEST = "/api/users?page=2";
 
     /**
-     * 1. Получить список пользователей со второй страница на сайте https://reqres.in/
-     * 2. Убедиться что id пользователей содержаться в их avatar;
-     * 3. Убедиться, что email пользователей имеет окончание reqres.in;
+     * 1. Получить список пользователей со второй страницы на сайте https://reqres.in
+     * 2. Убедиться, что id пользователей содержится в их avatar;
+     * 3. Убедиться, что e-mail пользователей имеет окончание reqres.in;
      */
 
     // expected ten-code: 200
