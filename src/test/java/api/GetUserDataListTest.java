@@ -11,15 +11,14 @@ import java.util.stream.Collectors;
 import static io.restassured.RestAssured.given;
 
 public class GetUserDataListTest {
-    private final static String URL = "https://reqres.in";
-    private final static String REQUEST = "/api/users?page=2";
+    private final static String URL = "https://reqres.in/";
+    private final static String REQUEST = "api/users?page=2";
 
     /**
      * 1. Получить список пользователей со второй страницы на сайте https://reqres.in
      * 2. Убедиться, что id пользователей содержится в их avatar;
      * 3. Убедиться, что e-mail пользователей имеет окончание reqres.in;
      */
-
     // expected ten-code: 200
     @Test
     public void checkIdAndMailApiTest() {
@@ -31,7 +30,8 @@ public class GetUserDataListTest {
                 .extract().body().jsonPath().getList("data", UserData.class);
 
         userDataApiList.forEach(x -> Assert.assertTrue(x.getAvatar().contains(x.getId().toString())));
-        Assert.assertTrue(userDataApiList.stream().allMatch(x -> x.getEmail().endsWith("@regres.in")));
+
+        Assert.assertTrue(userDataApiList.stream().allMatch(x -> x.getEmail().endsWith("@reqres.in")));
 
         List<String> usersAvatars = userDataApiList.stream()
                 .map(UserData::getAvatar)
