@@ -19,7 +19,7 @@ public class PostRegistrationUserTest {
      * 2. Проверить код запроса
      */
     @Test(description = "Тест для успешной регистрации")
-    public void successfulRegistration() {
+    public void successfulRegistrationTest() {
 //         JsonObject jsonObject = new JsonObject()
 //                .add("expectedId", 4)
 //                .add("expectedToken", "QpwL5tke4Pnpja7X4");
@@ -50,7 +50,7 @@ public class PostRegistrationUserTest {
      * 2. Проверить код запроса  api/register
      */
     @Test(description = "Тест для неуспешной регистрации (не введен пароль)")
-    public void unSuccessfulRegistration() {
+    public void unSuccessfulRegistrationTest() {
         RegisterRequest secondUser = new RegisterRequest("sydney@fife", "");
         UnSuccessfulRegisterResponse unSuccessfulRegisterResponse = given()
                 .body(secondUser)

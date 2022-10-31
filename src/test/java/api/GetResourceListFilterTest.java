@@ -4,14 +4,13 @@ import io.restassured.http.ContentType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import testAutoFramework.models.usersData.ResourceUserData;
-import testAutoFramework.models.usersData.UserData;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 
-public class GetResourceListFilter {
+public class GetResourceListFilterTest {
     private final static String URL = "https://reqres.in/";
     private final static String REQUEST = "api/unknown";
 
@@ -19,8 +18,8 @@ public class GetResourceListFilter {
      * Используя сервис https://reqres.in/ убедиться, что операция LIST<RESOURCE> возвращает данные,
      * отсортированные по годам.
      */
-    @Test(description = "Правильная сортировка годов")
-    public void correctYearFilterCheck() {
+    @Test(description = "Тест для проверки правильности сортировки года")
+    public void correctYearFilterCheckTest() {
         List<ResourceUserData> resourceUsers = given()
                 .when()
                 .contentType(ContentType.JSON)
