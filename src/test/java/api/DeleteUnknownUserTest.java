@@ -5,8 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class DeleteUnknownUserTest {
-    private final static String URL = "https://reqres.in/";
+public class DeleteUnknownUserTest extends BaseApiTest{
     private final static String REQUEST = "api/users/2";
 
     @Test(description = "Тет для проверки удаления пользователя")

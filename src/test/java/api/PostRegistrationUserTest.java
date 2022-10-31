@@ -10,8 +10,7 @@ import testAutoFramework.models.registerReqres.UnSuccessfulRegisterResponse;
 
 import static io.restassured.RestAssured.given;
 
-public class PostRegistrationUserTest {
-    private final static String URL = "https://reqres.in/";
+public class PostRegistrationUserTest extends BaseApiTest {
     private final static String REQUEST = "api/register";
 
     /**

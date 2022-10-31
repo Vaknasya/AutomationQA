@@ -8,8 +8,7 @@ import testAutoFramework.models.usersData.UserData;
 
 import static io.restassured.RestAssured.given;
 
-public class GetSingleUserDataTest {
-    private final static String URL = "https://reqres.in/";
+public class GetSingleUserDataTest extends BaseApiTest {
     private final static String REQUEST = "api/users/2";
 
     @Test(description = "Получение данных 1 пользователя")

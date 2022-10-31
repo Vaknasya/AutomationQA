@@ -10,8 +10,7 @@ import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 
-public class GetResourceListFilterTest {
-    private final static String URL = "https://reqres.in/";
+public class GetResourceListFilterTest extends BaseApiTest {
     private final static String REQUEST = "api/unknown";
 
     /**
