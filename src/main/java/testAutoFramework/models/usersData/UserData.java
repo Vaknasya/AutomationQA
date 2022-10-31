@@ -1,4 +1,4 @@
-package testAutoFramework.models;
+package testAutoFramework.models.usersData;
 
 public class UserData {
     private Integer id;

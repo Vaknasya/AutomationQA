@@ -3,7 +3,7 @@ package api;
 import io.restassured.http.ContentType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import testAutoFramework.models.UserData;
+import testAutoFramework.models.usersData.UserData;
 
 import java.util.List;
 import java.util.stream.Collectors;
