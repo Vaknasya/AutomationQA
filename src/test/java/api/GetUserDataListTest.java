@@ -17,7 +17,7 @@ public class GetUserDataListTest {
     /**
      * 1. Получить список пользователей со второй страницы на сайте https://reqres.in
      * 2. Убедиться, что id пользователей содержится в их avatar;
-     * 3. Убедиться, что e-mail пользователей имеет окончание reqres.in;
+     * 3. Убедиться, что e-mail пользователей имеет окончание reqres.in; Q is not G :D
      */
     // expected ten-code: 200
     @Test

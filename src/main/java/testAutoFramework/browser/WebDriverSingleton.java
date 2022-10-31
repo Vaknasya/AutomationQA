@@ -13,7 +13,7 @@ public class WebDriverSingleton {
 
     public static synchronized WebDriver getDriver() {
         if (instance == null) {
-            instance = createBrowserByArgument(FIREFOX_INCOGNITO);
+            instance = createBrowserByArgument(CHROME);
         }
         return instance;
     }

@@ -1,5 +1,6 @@
 package api;
 
+import com.google.gson.JsonObject;
 import io.restassured.http.ContentType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -19,9 +20,12 @@ public class PostRegistrationUserTest {
      */
     @Test(description = "Тест для успешной регистрации")
     public void successfulRegistration() {
+//         JsonObject jsonObject = new JsonObject()
+//                .add("expectedId", 4)
+//                .add("expectedToken", "QpwL5tke4Pnpja7X4");
         Integer expectedId = 4;
         String expectedToken = "QpwL5tke4Pnpja7X4";
-        RegisterRequest firstUser = new RegisterRequest("eve.holt@reqres.in","pistol");
+        RegisterRequest firstUser = new RegisterRequest("eve.holt@reqres.in", "pistol");
         SuccessfulRegisterResponse successfulRegisterResponse = given()
                 .body(firstUser)
                 .contentType(ContentType.JSON)
@@ -36,6 +40,9 @@ public class PostRegistrationUserTest {
 
         Assert.assertEquals(expectedId, successfulRegisterResponse.getId());
         Assert.assertEquals(expectedToken, successfulRegisterResponse.getToken());
+
+//        Assert.assertEquals(jsonObject.get("expectedId"), successfulRegisterResponse.getId());
+//        Assert.assertEquals(jsonObject.get("expectedToken"), successfulRegisterResponse.getToken());
     }
 
     /**
@@ -44,7 +51,7 @@ public class PostRegistrationUserTest {
      */
     @Test(description = "Тест для неуспешной регистрации (не введен пароль)")
     public void unSuccessfulRegistration() {
-        RegisterRequest secondUser = new RegisterRequest("sydney@fife","");
+        RegisterRequest secondUser = new RegisterRequest("sydney@fife", "");
         UnSuccessfulRegisterResponse unSuccessfulRegisterResponse = given()
                 .body(secondUser)
                 .when()
