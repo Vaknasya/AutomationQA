@@ -18,7 +18,7 @@ public class DrivarFactory {
         switch (driverEnum) {
             case CHROME:
                 System.setProperty("webdriver.chrome.driver","J:\\WebDriversForSelenium\\chrome\\chromedriver.exe");
-//              System.setProperty("webdriver.chrome.driver","/path/chromedriver");
+//              System.setProperty("webdriver.chrome.driver","./exefiles/chromedriver.exe");
                 return new ChromeDriver();
 
             case FIREFOX:
