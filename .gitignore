@@ -1,5 +1,6 @@
 /shelf/
 /.idea/workspace.xml
+allure-results/*.json
 allure-results/
 /httpRequests/
 /dataSources/

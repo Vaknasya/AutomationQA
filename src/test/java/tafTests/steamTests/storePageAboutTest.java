@@ -16,6 +16,8 @@ public class storePageAboutTest extends BaseTest {
         storeForm.clickAboutBtn();
         Assert.assertTrue(storeForm.isAboutMonitorLabelDisplayed(), "The opened page is not About Steam page");
 
+        Assert.assertTrue(storeForm.getOnlinePlayerCount() > storeForm.getPlayersInGameCount());
+
         storeForm.clickStoreBtn();
 
 
