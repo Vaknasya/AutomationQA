@@ -80,6 +80,14 @@ public class WebTablesPage extends BaseForm {
         submitRecordBtn.click();
     }
 
+    public void sendUserData(String firstName, String lastName, String email, String age, String salary, String department){
+        userFirstNameInput.sendKeys(firstName);
+        userLastNameInput.sendKeys(lastName);
+        userEmailInput.sendKeys(email);
+        userAgeInput.sendKeys(age);
+        userSalaryInput.sendKeys(salary);
+        userDepartmentInput.sendKeys(department);
+    }
 
 
 }

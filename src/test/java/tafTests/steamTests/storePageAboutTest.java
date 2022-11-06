@@ -1,5 +1,6 @@
 package tafTests.steamTests;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import tafPages.steamPages.SteamStoreForm;
@@ -8,6 +9,7 @@ import tafTests.BaseTest;
 public class storePageAboutTest extends BaseTest {
 
     private SteamStoreForm storeForm = new SteamStoreForm(driver);
+    JavascriptExecutor js = (JavascriptExecutor)driver;
 
     @Test
     public void storePageAboutPageTest(){

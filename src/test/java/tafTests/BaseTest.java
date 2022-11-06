@@ -15,7 +15,7 @@ public abstract class BaseTest {
     protected WebDriver driver = WebDriverSingleton.getDriver();
     protected static LoggerManager logger = new LoggerManager();
 
-    @BeforeMethod
+    @BeforeSuite
     protected void setupMethod() {
         logger.getLoggerMessage(this.getClass().toString(), "Was started");
         driver.manage().window().maximize();

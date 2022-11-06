@@ -1,5 +1,6 @@
 package tafTests.demoqaTests;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tafPages.demoqaPages.WebTablesPage;
@@ -9,6 +10,7 @@ import testAutoFramework.models.WebTablesTestPersonData;
 public class WebTablesTest extends BaseTest {
 
     private WebTablesPage webTablesForm = new WebTablesPage(driver);
+    JavascriptExecutor js = (JavascriptExecutor)driver;
 
     @DataProvider(name = "webTablesPageTestDataProvider")
     public Object[][] userDetails() {
@@ -25,20 +27,24 @@ public class WebTablesTest extends BaseTest {
     public void webTablesPageTest(WebTablesTestPersonData personData) {
 
         webTablesForm.open(DEMOQA_URL);
+        js.executeScript("window.scrollBy(0, 250)");
 
         webTablesForm.clickElementsCard();
+        js.executeScript("window.scrollBy(0, 100)");
 
         webTablesForm.clickWebTablesLabel();
 
         webTablesForm.clickAddNewRecordBtn();
         // Assert
 
-        webTablesForm.sendUserFirstName(personData.getFirstName());
-        webTablesForm.sendUserLastName(personData.getLastName());
-        webTablesForm.sendUserEmail(personData.getEmail());
-        webTablesForm.sendUserAge(personData.getAge());
-        webTablesForm.sendUserSalary(personData.getSalary());
-        webTablesForm.sendUserDepartment(personData.getDepartment());
+        webTablesForm.sendUserData(
+                personData.getFirstName(),
+                personData.getLastName(),
+                personData.getEmail(),
+                personData.getAge(),
+                personData.getSalary(),
+                personData.getDepartment()
+                );
 
         webTablesForm.clickSubmitBtn();
 
