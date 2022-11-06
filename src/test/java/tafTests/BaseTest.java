@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeTest;
 import testAutoFramework.browser.WebDriverSingleton;
 import testAutoFramework.utils.LoggerManager;
 
+import java.time.Duration;
+
 public abstract class BaseTest {
     // переделать под конфиг и переименовать под BASE_URL или реализовать enum
     protected static final String STEAM_URL = "https://store.steampowered.com/";
@@ -20,6 +22,8 @@ public abstract class BaseTest {
     protected void setupMethod() {
         logger.getLoggerMessage(this.getClass().toString(), "Was started");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
     }
 
     @AfterMethod
