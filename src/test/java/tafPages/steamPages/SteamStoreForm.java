@@ -32,6 +32,13 @@ public class SteamStoreForm extends BaseForm {
         return aboutMonitorLabel.isDisplayed();
     }
 
+    private final Label homePageGutter = new Label(By.xpath("//div[@class='home_page_gutter']"),
+            "Home page Gutter");
+
+    public boolean isHomePageGutterDisplayed(){
+        return homePageGutter.isDisplayed();
+    }
+
     private final Button goToStoreButton = new Button(By.xpath("//div[@class='supernav_container']//a[contains((@data-tooltip-content), 'store')] "),
             "Go to the store page button");
 
