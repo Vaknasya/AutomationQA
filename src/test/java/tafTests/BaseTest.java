@@ -1,10 +1,7 @@
 package tafTests;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 import testAutoFramework.browser.WebDriverSingleton;
 import testAutoFramework.utils.LoggerManager;
 
@@ -26,7 +23,7 @@ public abstract class BaseTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
     }
 
-    @AfterMethod
+    @AfterSuite
     public void quitTheApp() {
         logger.getLoggerMessage(this.getClass().toString(), "Was closed");
         driver.quit();

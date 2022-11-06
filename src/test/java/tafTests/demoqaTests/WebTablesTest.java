@@ -42,18 +42,6 @@ public class WebTablesTest extends BaseTest {
 
         webTablesForm.clickSubmitBtn();
 
-        webTablesForm.clickAddNewRecordBtn();
-
-        webTablesForm.sendUserFirstName(personData.getFirstName());
-        webTablesForm.sendUserLastName(personData.getLastName());
-        webTablesForm.sendUserEmail(personData.getEmail());
-        webTablesForm.sendUserAge(personData.getAge());
-        webTablesForm.sendUserSalary(personData.getSalary());
-        webTablesForm.sendUserDepartment(personData.getDepartment());
-
-        webTablesForm.clickSubmitBtn();
-
-
     }
 
 }
