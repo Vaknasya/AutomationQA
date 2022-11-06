@@ -1,5 +1,13 @@
 package testAutoFramework.elements.actions;
 
-public class JavaScriptActions {
+import org.openqa.selenium.By;
+import testAutoFramework.elements.BaseElement;
+
+public class JavaScriptActions extends BaseElement {
+
+    public JavaScriptActions(By locator, String name) {
+        super(locator, name);
+    }
+
 
 }
