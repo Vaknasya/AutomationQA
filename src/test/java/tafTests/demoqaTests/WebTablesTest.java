@@ -4,20 +4,25 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tafPages.demoqaPages.WebTablesPage;
 import tafTests.BaseTest;
-import testAutoFramework.models.BaseModel;
-import testAutoFramework.models.Person;
+import testAutoFramework.models.WebTablesTestPersonData;
 
 public class WebTablesTest extends BaseTest {
 
     private WebTablesPage webTablesForm = new WebTablesPage(driver);
 
+    @DataProvider(name = "webTablesPageTestDataProvider")
+    public Object[][] userDetails() {
 
+        return new Object[][]{
+                {new WebTablesTestPersonData("Jessy", "Popkorn", "heel@mail.ru", "25", "2500", "B2B")},
+                {new WebTablesTestPersonData("Makaron", "Ssosiskami", "hefl@mail.ru", "20", "2000", "E2B")},
+                {new WebTablesTestPersonData("Jessyoooook", "Popkor231321n", "he12312321el@mail.ru", "235", "25002", "B2Beeee")}
+        };
 
+    }
 
-    @Test
-    public void webTablesPageTest() {
-
-        // использовать дата провайдер и начать использовать вейтеры
+    @Test(dataProvider = "webTablesPageTestDataProvider")
+    public void webTablesPageTest(WebTablesTestPersonData personData) {
 
         webTablesForm.open(DEMOQA_URL);
 
@@ -28,19 +33,25 @@ public class WebTablesTest extends BaseTest {
         webTablesForm.clickAddNewRecordBtn();
         // Assert
 
-        // Label Elements //*[@class='category-cards']/div[1]
-        // Label webTables  //*[@class='accordion']/div[1]//li[@id='item-3']
-        // Button addNewRecord //button[@id='addNewRecordButton']
+        webTablesForm.sendUserFirstName(personData.getFirstName());
+        webTablesForm.sendUserLastName(personData.getLastName());
+        webTablesForm.sendUserEmail(personData.getEmail());
+        webTablesForm.sendUserAge(personData.getAge());
+        webTablesForm.sendUserSalary(personData.getSalary());
+        webTablesForm.sendUserDepartment(personData.getDepartment());
 
-        // Input //input[@id='firstName']
-        //        //input[@id='lastName']
-        //          //input[@id='userEmail']
-        //          //input[@id='age']
-        //          //input[@id='salary']
-        //          //input[@id='department']
+        webTablesForm.clickSubmitBtn();
 
-        // Button submit //button[@id='submit']
-        //
+        webTablesForm.clickAddNewRecordBtn();
+
+        webTablesForm.sendUserFirstName(personData.getFirstName());
+        webTablesForm.sendUserLastName(personData.getLastName());
+        webTablesForm.sendUserEmail(personData.getEmail());
+        webTablesForm.sendUserAge(personData.getAge());
+        webTablesForm.sendUserSalary(personData.getSalary());
+        webTablesForm.sendUserDepartment(personData.getDepartment());
+
+        webTablesForm.clickSubmitBtn();
 
 
     }

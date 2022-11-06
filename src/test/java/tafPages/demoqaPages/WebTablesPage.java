@@ -76,7 +76,7 @@ public class WebTablesPage extends BaseForm {
 
     Button submitRecordBtn = new Button(By.xpath("//button[@id='submit']"), "Submit record button");
 
-    public void clicksubmitBtn(){
+    public void clickSubmitBtn(){
         submitRecordBtn.click();
     }
 
