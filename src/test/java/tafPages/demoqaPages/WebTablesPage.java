@@ -2,10 +2,13 @@ package tafPages.demoqaPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import testAutoFramework.elements.clickableElements.Button;
 import testAutoFramework.elements.clickableElements.Input;
 import testAutoFramework.elements.clickableElements.Label;
 import testAutoFramework.forms.BaseForm;
+
+import java.util.List;
 
 public class WebTablesPage extends BaseForm {
 
@@ -87,6 +90,13 @@ public class WebTablesPage extends BaseForm {
         userAgeInput.sendKeys(age);
         userSalaryInput.sendKeys(salary);
         userDepartmentInput.sendKeys(department);
+    }
+
+    private final Label webTablesContent = new Label(By.xpath("//div[@class='rt-tbody']"),
+            "Table content");
+
+    public List<WebElement> getTableContentList(){
+       return webTablesContent.findElements();
     }
 
 

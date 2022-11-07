@@ -1,11 +1,18 @@
 package tafTests.demoqaTests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import tafPages.demoqaPages.WebTablesPage;
 import tafTests.BaseTest;
 import testAutoFramework.models.WebTablesTestPersonData;
+import testAutoFramework.models.usersData.UserData;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class WebTablesTest extends BaseTest {
 
@@ -47,6 +54,8 @@ public class WebTablesTest extends BaseTest {
                 );
 
         webTablesForm.clickSubmitBtn();
+
+       // List<WebElement> usersData = webTablesForm.getTableContentList();
 
     }
 
