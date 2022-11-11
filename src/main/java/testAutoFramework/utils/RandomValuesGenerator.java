@@ -5,6 +5,11 @@ import java.math.BigInteger;
 import static io.github.qsy7.logging.util.ExceptionUtil.random;
 
 public class RandomValuesGenerator {
+    public final String capitalChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public final String smallChars = "abcdefghijklmnopqrstuvwxyz";
+    public final String numbers = "0123456789";
+    public final String symbols = "!@#$%^&*()_+<>?";
+
     public static String randomString;
     public static long randomLong;
 
