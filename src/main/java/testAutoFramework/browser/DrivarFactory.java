@@ -17,22 +17,22 @@ public class DrivarFactory {
        logger.getLoggerInfo("Setup webDriver" + driverEnum);
         switch (driverEnum) {
             case CHROME:
-                System.setProperty("webdriver.chrome.driver","J:\\WebDriversForSelenium\\chrome\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver","J:\\pathMap\\webdrivers\\chromedriver.exe");
 //              System.setProperty("webdriver.chrome.driver","./exefiles/chromedriver.exe");
                 return new ChromeDriver();
 
             case FIREFOX:
-                System.setProperty("webdriver.gecko.driver", "J:\\WebDriversForSelenium\\geckofirefox\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "J:\\pathMap\\webdrivers\\geckodriver.exe");
                 return new FirefoxDriver();
 
             case CHROME_INCOGNITO:
-                System.setProperty("webdriver.chrome.driver","J:\\WebDriversForSelenium\\chrome\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver","J:\\pathMap\\webdrivers\\chromedriver.exe");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--incognito");
                 return new ChromeDriver(chromeOptions);
 
             case FIREFOX_INCOGNITO:
-                System.setProperty("webdriver.gecko.driver", "J:\\WebDriversForSelenium\\geckofirefox\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "J:\\pathMap\\webdrivers\\geckodriver.exe");
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.addArguments("-private");
                 return new FirefoxDriver(firefoxOptions);

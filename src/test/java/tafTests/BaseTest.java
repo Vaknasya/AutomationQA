@@ -29,10 +29,6 @@ public abstract class BaseTest {
         driver.quit();
     }
 
-    //  Getter есть, разобраться с ним
-    protected WebDriverSingleton getBrowser() {
-        return (WebDriverSingleton) WebDriverSingleton.getDriver();
-    }
 
 
 
