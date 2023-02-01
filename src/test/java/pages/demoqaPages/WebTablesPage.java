@@ -1,8 +1,9 @@
-package tafPages.demoqaPages;
+package pages.demoqaPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import testAutoFramework.elements.clickableElements.Button;
 import testAutoFramework.elements.clickableElements.Input;
 import testAutoFramework.elements.clickableElements.Label;
@@ -19,6 +20,8 @@ public class WebTablesPage extends BaseForm {
     public WebTablesPage(WebDriver driver) {
         super(driver);
     }
+
+    @FindBy(id = "//*[@class='category-cards']/div[1]") WebElement ed;
 
     Label elementsCard = new Label(By.xpath("//*[@class='category-cards']/div[1]"),
             "Element Card");

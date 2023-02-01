@@ -1,10 +1,9 @@
 package testAutoFramework.models;
 
-import lombok.Builder;
-import lombok.Data;
+//import lombok.Builder;
+//import lombok.Data;
 
-@Data
-@Builder
+
 public class WebTablesTestPersonData {
     private String firstName;
     private String lastName;

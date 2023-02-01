@@ -5,5 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import testAutoFramework.elements.BaseElement;
 
 public class MouseActions {
+
+
     
 }

@@ -1,10 +1,12 @@
-package tafTests.steamTests;
+package tests.steamTests;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import tafPages.steamPages.SteamStoreForm;
-import tafTests.BaseTest;
+import pages.steamPages.SteamStoreForm;
+import tests.BaseTest;
+import testAutoFramework.utils.Constants;
+
 
 public class storePageAboutTest extends BaseTest {
 
@@ -14,7 +16,7 @@ public class storePageAboutTest extends BaseTest {
     @Test
     public void storePageAboutPageTest(){
 
-        storeForm.open(STEAM_URL);
+        storeForm.open(Constants.STEAM_URL);
         Assert.assertTrue(storeForm.isHomePageGutterDisplayed(), "The page is opened is not STEAM_URL");
 
         storeForm.clickAboutBtn();

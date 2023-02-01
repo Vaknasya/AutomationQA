@@ -22,7 +22,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.7.1</version>
+            <version>4.8.0</version>
         </dependency>
 
         <!--                          TestNG
@@ -73,30 +73,6 @@
             <artifactId>log4j-over-slf4j</artifactId>
             <version>2.0.0</version>
         </dependency>
-
-        <!--            lombok
-       https://central.sonatype.dev/artifact/org.projectlombok/lombok/1.18.24  -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-        </dependency>
-
-        <!--            REST Assured
-       https://search.maven.org/artifact/io.rest-assured/rest-assured/5.2.0/bundle -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>5.2.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>5.2.0</version>
-            <scope>compile</scope>
-        </dependency>
-
 
     </dependencies>
 

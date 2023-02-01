@@ -1,23 +1,18 @@
-package tafTests.demoqaTests;
+package tests.demoqaTests;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import tafPages.demoqaPages.WebTablesPage;
-import tafTests.BaseTest;
+import pages.demoqaPages.WebTablesPage;
+import tests.BaseTest;
 import testAutoFramework.models.WebTablesTestPersonData;
-import testAutoFramework.models.usersData.UserData;
+import testAutoFramework.utils.Constants;
 
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class WebTablesTest extends BaseTest {
 
     private WebTablesPage webTablesForm = new WebTablesPage(driver);
-    JavascriptExecutor js = (JavascriptExecutor)driver;
+    JavascriptExecutor js = (JavascriptExecutor) driver;
 
     @DataProvider(name = "webTablesPageTestDataProvider")
     public Object[][] userDetails() {
@@ -33,7 +28,7 @@ public class WebTablesTest extends BaseTest {
     @Test(dataProvider = "webTablesPageTestDataProvider")
     public void webTablesPageTest(WebTablesTestPersonData personData) {
 
-        webTablesForm.open(DEMOQA_URL);
+        webTablesForm.open(Constants.DEMOQA_URL);
         js.executeScript("window.scrollBy(0, 250)");
 
         webTablesForm.clickElementsCard();
@@ -51,11 +46,11 @@ public class WebTablesTest extends BaseTest {
                 personData.getAge(),
                 personData.getSalary(),
                 personData.getDepartment()
-                );
+        );
 
         webTablesForm.clickSubmitBtn();
 
-       // List<WebElement> usersData = webTablesForm.getTableContentList();
+        // List<WebElement> usersData = webTablesForm.getTableContentList();
 
     }
 

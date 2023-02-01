@@ -1,10 +1,9 @@
-package tafPages.steamPages;
+package pages.steamPages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import testAutoFramework.elements.clickableElements.Button;
 import testAutoFramework.elements.clickableElements.Label;
-import testAutoFramework.elements.clickableElements.TextBox;
 import testAutoFramework.forms.BaseForm;
 
 public class SteamStoreForm extends BaseForm {
