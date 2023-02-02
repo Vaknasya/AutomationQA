@@ -16,7 +16,6 @@ public class SteamStoreForm extends BaseForm {
         super(instance);
     }
 
-    // сделать фабрику элементов
     private final Button btnAboutSteam = new Button(By.xpath("//div[@class='supernav_container']//*[contains((@href), 'about')] "),
             "About Button");
 
