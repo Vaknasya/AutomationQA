@@ -5,5 +5,7 @@ public class Constants {
     public static final String STEAM_URL = "https://store.steampowered.com/";
     public static final String DEMOQA_URL = "https://demoqa.com/";
 
+    public static final String AMAZON_URL = "https://www.amazon.com/";
+
 
 }

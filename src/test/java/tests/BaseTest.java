@@ -16,8 +16,8 @@ public abstract class BaseTest {
     protected void setupMethod() {
         logger.getLoggerMessage(this.getClass().toString(), "Was started");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
     }
 
     @AfterSuite
@@ -25,8 +25,6 @@ public abstract class BaseTest {
         logger.getLoggerMessage(this.getClass().toString(), "Was closed");
         driver.quit();
     }
-
-
 
 
 }

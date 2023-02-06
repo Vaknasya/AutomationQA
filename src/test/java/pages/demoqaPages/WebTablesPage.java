@@ -21,7 +21,8 @@ public class WebTablesPage extends BaseForm {
         super(driver);
     }
 
-    @FindBy(id = "//*[@class='category-cards']/div[1]") WebElement ed;
+//    @FindBy(xpath = "//*[@class='category-cards']/div[1]")
+//    WebElement ed;
 
     Label elementsCard = new Label(By.xpath("//*[@class='category-cards']/div[1]"),
             "Element Card");

@@ -4,10 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import testAutoFramework.browser.WebDriverSingleton;
 import testAutoFramework.utils.LoggerManager;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public abstract class BaseElement {
     protected static LoggerManager logger = new LoggerManager();
@@ -50,6 +54,10 @@ public abstract class BaseElement {
         findElement().sendKeys(keys);
     }
 
+    Wait<WebDriver> wait = new FluentWait<WebDriver>(instance)
+            .withTimeout(Duration.ofSeconds(30))
+            .pollingEvery(Duration.ofSeconds(5))
+            .ignoring(NoSuchElementException.class);
 
 
     
