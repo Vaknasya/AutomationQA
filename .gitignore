@@ -2,6 +2,16 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+/shelf/
+/.idea/workspace.xml
+/httpRequests/
+/dataSources/
+/dataSources.local.xml
+.idea/
+*.iml
+*.iws
+log/
+target/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
