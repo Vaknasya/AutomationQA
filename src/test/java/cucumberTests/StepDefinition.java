@@ -6,9 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
 
-import java.util.Optional;
-
-public class SumTest {
+public class StepDefinition {
     CalculatorSum calculatorSum;
     Integer result;
 
