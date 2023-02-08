@@ -24,7 +24,7 @@ public class UploadTest extends BaseTest {
         uploadPage.clickUploadElementsCard();
 
 
-        uploadPage.clickUploadBtn("C:\\Users\\Ася(Любимый енотик)\\Downloads");
+        uploadPage.clickUploadBtn("C:\\Users\\Asya\\Desktop\\Neko\\5bf46c888a363.jpg");
     }
 
 }
